@@ -18,7 +18,21 @@
       <dd><img src="<%= @actor.image_url %>"></dd>
 
       <dt> Number of Roles </dt>
-      <dd> <%= Character.where(:actor_id => @actor.id).count %></dd>
+      <dd> <%= @actor.characters.count %></dd>
+
+      <dt>Roles</dt>
+
+      <% @actor.characters.each do |character|  %>
+      <dd>
+        <a href="/characters/<%= character.id %>">
+          <%= character.name %>
+        </a>
+
+        <a href="/movies/<%= character.movie_id%>">
+          (<%= character.movie.title %>)
+        </a>
+      </dd>
+      <%end %>
 
     </dl>
 

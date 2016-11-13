@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/raghubetina/starter_generators.git
+  revision: eb3d7989b4fd429af524d8defe4281841b910370
+  specs:
+    starter_generators (0.9.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -213,6 +219,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda-matchers
   sqlite3
+  starter_generators!
   tzinfo-data
   uglifier (>= 1.3.0)
   webmock
